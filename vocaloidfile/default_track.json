@@ -1,0 +1,32 @@
+{
+    "type": 0,
+    "name": "praat",
+    "color": 0,
+    "busNo": 0,
+    "isFolded": false,
+    "height": 0.0,
+    "volume": {
+        "isFolded": true,
+        "height": 40.0,
+        "events": [
+            {
+                "pos": 0,
+                "value": 0
+            }
+        ]
+    },
+    "panpot": {
+        "isFolded": true,
+        "height": 40.0,
+        "events": [
+            {
+                "pos": 0,
+                "value": 0
+            }
+        ]
+    },
+    "isMuted": false,
+    "isSoloMode": false,
+    "lastScrollPositionNoteNumber": 72,
+    "parts": []
+}

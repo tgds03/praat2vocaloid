@@ -1,0 +1,131 @@
+{
+    "pos": 0,
+    "duration": 7680,
+    "styleName": "No Effect",
+    "stylePresetID": "0c29827a-4289-495d-94d2-e23602d346c6",
+    "voice": {
+        "compID": "BX77CNBZLBPHZX97",
+        "langID": 2
+    },
+    "aiVoice": {
+        "compID": "BLKEA452HDSKXLD7",
+        "langIDs": [
+            {
+                "langID": 0
+            },
+            {
+                "langID": 1
+            },
+            {
+                "langID": 4
+            }
+        ]
+    },
+    "midiEffects": [
+        {
+            "id": "SingingSkill",
+            "isBypassed": true,
+            "isFolded": false,
+            "parameters": [
+                {
+                    "name": "Skill",
+                    "value": 5
+                },
+                {
+                    "name": "Amount",
+                    "value": 5
+                },
+                {
+                    "name": "Name",
+                    "value": "75F04D2B-D8E4-44b8-939B-41CD101E08FD"
+                }
+            ]
+        },
+        {
+            "id": "VoiceColor",
+            "isBypassed": true,
+            "isFolded": false,
+            "parameters": [
+                {
+                    "name": "Exciter",
+                    "value": 0
+                },
+                {
+                    "name": "Growl",
+                    "value": 0
+                },
+                {
+                    "name": "Breathiness",
+                    "value": 0
+                },
+                {
+                    "name": "Air",
+                    "value": 0
+                },
+                {
+                    "name": "Mouth",
+                    "value": 0
+                },
+                {
+                    "name": "Character",
+                    "value": 0
+                },
+                {
+                    "name": "S5Expression",
+                    "value": 50
+                },
+                {
+                    "name": "S5Air",
+                    "value": 0
+                },
+                {
+                    "name": "S5Character",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "id": "RobotVoice",
+            "isBypassed": true,
+            "isFolded": false,
+            "parameters": [
+                {
+                    "name": "Mode",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "id": "Breath",
+            "isBypassed": true,
+            "isFolded": false,
+            "parameters": [
+                {
+                    "name": "Mode",
+                    "value": 1
+                },
+                {
+                    "name": "Type",
+                    "value": 0
+                },
+                {
+                    "name": "Exhalation",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "id": "Take",
+            "isBypassed": false,
+            "isFolded": false,
+            "parameters": [
+                {
+                    "name": "Lane630",
+                    "value": 0
+                }
+            ]
+        }
+    ],
+    "notes": [],
+    "controllers": []
+}
