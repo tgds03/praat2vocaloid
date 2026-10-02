@@ -35,15 +35,18 @@ class ControllerName:
 class VprConverter:
     def set_vprsrc(self, vprpath):
         self.vprpath = vprpath
-        with zipfile.ZipFile(vprpath, 'r') as f:
-            self.seq_data_raw = f.read(SEQ_PATH)
-            self.seq_data = json.loads(self.seq_data_raw)
+        try:
+            with zipfile.ZipFile(vprpath, 'r') as f:
+                self.seq_data_raw = f.read(SEQ_PATH)
+                self.seq_data = json.loads(self.seq_data_raw)
+        except zipfile.BadZipFile as e:
+            raise RuntimeError(f"Can not open {vprpath} as .vpr file") from e
         self.tuning_freq = self.seq_data["masterTrack"]["mainTuning"]
         return self.seq_data
 
     def set_csvsrc(self, csvpath, time_col_name="Time_s", pitch_col_name="F0_Hz", intensity_col_name="Intensity_dB"):
         with open(csvpath, 'r', newline='', encoding="utf-8") as f:
-            self.csv_data = list(csv.reader(f, delimiter=' '))
+            self.csv_data = list(csv.reader(f, delimiter='\t'))
         
         header = self.csv_data[0]
 
