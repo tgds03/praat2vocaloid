@@ -6,16 +6,16 @@ import csv
 
 DIR = Path(__file__).resolve().parent
 
-with open(DIR / "default_note.json", 'r') as file:
+with open(DIR / "default_note.json", 'r', encoding="utf-8") as file:
     DEFAULT_NOTE_RAW = file.read()
 
-with open(DIR / "default_controller.json", 'r') as file:
+with open(DIR / "default_controller.json", 'r', encoding="utf-8") as file:
     DEFAULT_CONTROLLER_RAW = file.read()
 
-with open(DIR / "default_part.json", 'r') as file:
+with open(DIR / "default_part.json", 'r', encoding="utf-8") as file:
     DEFAULT_PART_RAW = file.read()
 
-with open(DIR / "default_track.json", 'r') as file:
+with open(DIR / "default_track.json", 'r', encoding="utf-8") as file:
     DEFAULT_TRACK_RAW = file.read()
 
 SEQ_PATH = "Project/sequence.json"
@@ -40,7 +40,7 @@ class VprConverter:
         return self.seq_data
 
     def set_csvsrc(self, csvpath):
-        with open(csvpath, 'r', newline='') as f:
+        with open(csvpath, 'r', newline='', encoding="utf-8") as f:
             self.csv_data = list(csv.reader(f, delimiter=' '))
         return self.csv_data
 
@@ -71,9 +71,12 @@ class VprConverter:
 
     def add_pitch_to_part(self, part, time_col_name="Time_s", pitch_col_name="F0_Hz", start_offset=0):
         header = self.csv_data[0]
-        time_col_idx = header.index(time_col_name)
-        pitch_col_idx = header.index(pitch_col_name)
-
+        try:
+            time_col_idx = header.index(time_col_name)
+            pitch_col_idx = header.index(pitch_col_name)
+        except ValueError:
+            return
+        
         time = []
         pitch = []
         notes = []
@@ -132,9 +135,12 @@ class VprConverter:
 
     def add_intensity_to_part(self, part, min_value, max_value, time_col_name="Time_s", intensity_col_name="Intensity_dB", start_offset=0):
         header = self.csv_data[0]
-        time_col_idx = header.index(time_col_name)
-        intensity_col_idx = header.index(intensity_col_name)
-
+        try:
+            time_col_idx = header.index(time_col_name)
+            intensity_col_idx = header.index(intensity_col_name)
+        except ValueError:
+            return
+        
         time = []
         intensity = []
         for row in self.csv_data[1:]:
