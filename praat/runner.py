@@ -32,6 +32,12 @@ def find_praat(explicit=None):
         "or `brew install --cask praat` on macOS), "
         "or pass its path with --praat or the PRAAT_PATH environment variable.")
 
+def _decode(raw):
+    # praat on Windows writes console output in UTF-16LE, other platforms in UTF-8
+    if raw.startswith(b'\xff\xfe') or b'\x00' in raw:
+        return raw.decode("utf-16-le", errors="replace").lstrip('﻿')
+    return raw.decode("utf-8", errors="replace")
+
 def extract(audio_path, praat_path=None, time_step=0, pitch_floor=75, pitch_ceiling=600):
     audio_path = Path(audio_path).resolve()
     if not audio_path.is_file():
@@ -39,12 +45,12 @@ def extract(audio_path, praat_path=None, time_step=0, pitch_floor=75, pitch_ceil
     praat = find_praat(praat_path)
     cmd = [praat, "--run", str(SCRIPT), str(audio_path),
            str(time_step), str(pitch_floor), str(pitch_ceiling)]
-    result = subprocess.run(cmd, capture_output=True, encoding="utf-8")
+    result = subprocess.run(cmd, capture_output=True)
     if result.returncode != 0:
-        raise RuntimeError(f"Praat failed on {audio_path}:\n{result.stderr.strip()}")
+        raise RuntimeError(f"Praat failed on {audio_path}:\n{_decode(result.stderr).strip()}")
 
     data = {"time": [], "f0": [], "intensity": []}
-    lines = result.stdout.splitlines()
+    lines = _decode(result.stdout).splitlines()
     for line in lines[1:]:
         if not line.strip():
             continue
