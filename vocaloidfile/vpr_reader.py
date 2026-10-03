@@ -2,7 +2,6 @@ from pathlib import Path
 import math
 import json
 import zipfile
-import csv
 
 DIR = Path(__file__).resolve().parent
 
@@ -19,7 +18,7 @@ with open(DIR / "default_track.json", 'r', encoding="utf-8") as file:
     DEFAULT_TRACK_RAW = file.read()
 
 SEQ_PATH = "Project/sequence.json"
-A3_NUM = 57
+A3_NUM = 69
 
 def get_semitone(freq1, freq2):
     return math.log2(freq2 / freq1) * 12
@@ -44,65 +43,64 @@ class VprConverter:
         self.tuning_freq = self.seq_data["masterTrack"]["mainTuning"]
         return self.seq_data
 
-    def set_csvsrc(self, csvpath, time_col_name="Time_s", pitch_col_name="F0_Hz", intensity_col_name="Intensity_dB"):
-        with open(csvpath, 'r', newline='', encoding="utf-8") as f:
-            self.csv_data = list(csv.reader(f, delimiter='\t'))
-        
-        header = self.csv_data[0]
-
+    def set_analysis(self, data):
+        """data: {"time": [...], "f0": [...], "intensity": [...]}, undefined values are nan"""
         self.notes = None
         self.intensity = None
-        if time_col_name not in header:
-            raise ValueError(f"Can't find time column (named ${time_col_name})")
-        if pitch_col_name in header:
-            self.parse_pitch(header.index(time_col_name), header.index(pitch_col_name))
-        if intensity_col_name in header:
-            self.parse_intensity(header.index(time_col_name), header.index(intensity_col_name))
+        if "f0" in data:
+            self.parse_pitch(data["time"], data["f0"])
+        if "intensity" in data:
+            self.parse_intensity(data["time"], data["intensity"])
+        return data
 
-        return self.csv_data
-
-    def parse_pitch(self, time_col_idx, pitch_col_idx):
+    def parse_pitch(self, times, f0s):
         self.notes = []
         note_start = None
-        for row in self.csv_data[1:]:
-            time_value = float(row[time_col_idx])
-            try:
-                pitch_value = float(row[pitch_col_idx])
+        for time_value, pitch_value in zip(times, f0s):
+            if not math.isnan(pitch_value):
                 if note_start == None:
                     note_start = time_value
                     time = []
                     pitch = []
                 time.append(time_value)
                 pitch.append(pitch_value)
-            except ValueError:
-                pitch_value = None
+            else:
                 if note_start != None:
-                    note = {}
-                    note["bound"] = (note_start, time_value)
-                    note["time"] = time
-                    note["pitch"] = pitch
-                    note["pitch_max"], note["pitch_min"] = max(pitch), min(pitch)
-                    note["pitch_mid"] = note["pitch_min"] * pow(2, get_semitone(note["pitch_min"], note["pitch_max"]) / (12 * 2)) 
-                    note["pbs"] = math.ceil(get_semitone(note["pitch_mid"], note["pitch_max"]))
+                    self._flush_note(note_start, time_value, time, pitch)
                     note_start = None 
-                    self.notes.append(note)
 
-    def parse_intensity(self, time_col_idx, intensity_col_idx):
+        if note_start != None: 
+            self._flush_note(note_start, max(times) + 1, time, pitch)
+
+    def _flush_note(self, note_start, time_value, time, pitch):
+        note = {}
+        note["bound"] = (note_start, time_value)
+        note["time"] = time
+        note["pitch"] = pitch
+        note["pitch_max"], note["pitch_min"] = max(pitch), min(pitch)
+        note["pitch_mid"] = note["pitch_min"] * pow(2, get_semitone(note["pitch_min"], note["pitch_max"]) / (12 * 2)) 
+        note["pbs"] = math.ceil(get_semitone(note["pitch_mid"], note["pitch_max"]))
+        self.notes.append(note)
+
+
+
+    def parse_intensity(self, times, intensities):
         time = []
         intensity = []
-        for row in self.csv_data[1:]:
-            intensity_value = float(row[intensity_col_idx])
-            time_value = float(row[time_col_idx])
+        for time_value, intensity_value in zip(times, intensities):
+            if math.isnan(intensity_value):
+                continue
             time.append(time_value)
             intensity.append(intensity_value)
+        if not intensity:
+            return
         min_intensity, max_intensity = min(intensity), max(intensity)
-        intensity_range = get_dB(min_intensity, max_intensity)
 
         self.intensity = {}
         self.intensity["time"] = time
         self.intensity["intensity"] = intensity
-        self.intensity["intensity_max"], self.intensity["intensity_min"] = max(intensity), min(intensity)
-        self.intensity["intensity_range"] = get_dB(min_intensity, max_intensity)
+        self.intensity["intensity_max"], self.intensity["intensity_min"] = max_intensity, min_intensity
+        self.intensity["intensity_range"] = max_intensity - min_intensity
 
     def add_default_track(self):
         new_track = json.loads(DEFAULT_TRACK_RAW)
@@ -151,7 +149,7 @@ class VprConverter:
             startpos = int(note["bound"][0] * 1000) + start_offset
             endpos = int(note["bound"][1] * 1000) + start_offset
 
-            self.add_controlpoint(controller_pbs, startpos, min(note["pbs"], 24))
+            self.add_controlpoint(controller_pbs, startpos, max(1, min(note["pbs"], 24)))
             for idx in range(len(note["time"])):
                 pos = int(note["time"][idx] * 1000)
                 pos += start_offset
@@ -174,7 +172,6 @@ class VprConverter:
             return
         if min_value > max_value:
             raise ValueError("min_value is bigger than max_value")
-        intensity_range = get_dB(self.intensity["intensity_min"], self.intensity["intensity_max"])
 
         # check controller is already being
         controller_dyn = None
@@ -189,7 +186,7 @@ class VprConverter:
         for idx in range(len(self.intensity["time"])):
             pos = int(self.intensity["time"][idx] * 1000)
             pos += start_offset
-            val = get_dB(self.intensity["intensity_min"], self.intensity["intensity"][idx]) / intensity_range
+            val = (self.intensity["intensity"][idx] - self.intensity["intensity_min"]) / self.intensity["intensity_range"]
             val = (max_value - min_value) * val + min_value
             val = max(0, min(int(val), 127))
             self.add_controlpoint(controller_dyn, pos, val)
@@ -202,5 +199,5 @@ class VprConverter:
     def save_vpr(self, vprpath=None):
         if vprpath is None:
             vprpath = self.vprpath
-        with zipfile.ZipFile(self.vprpath, 'w') as f:
+        with zipfile.ZipFile(vprpath, 'w') as f:
             f.writestr(SEQ_PATH, json.dumps(self.seq_data))
