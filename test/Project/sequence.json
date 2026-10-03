@@ -1,1 +1,940 @@
-{"version":{"major":6,"minor":5,"revision":1},"vender":"Yamaha Corporation","title":"test","masterTrack":{"samplingRate":44100,"mainTuning":440.0,"loop":{"isEnabled":false,"begin":0,"end":7680},"tempo":{"isFolded":false,"height":0.0,"global":{"isEnabled":false,"value":12000},"ara":{"isEnabled":true},"events":[{"pos":0,"value":12000}]},"timeSig":{"isFolded":false,"events":[{"bar":0,"numer":4,"denom":4}]},"volume":{"isFolded":false,"height":20.0,"events":[{"pos":0,"value":0}]}},"voices":[{"compID":"BK67C6KZLHZHZKC2","name":"UNI_Kor_Original"},{"compID":"BLKEA452HDSKXLD7","name":"asa"}],"tracks":[{"type":2,"name":"dum","color":3,"busNo":0,"isFolded":false,"height":0.0,"volume":{"isFolded":true,"height":40.0,"events":[{"pos":0,"value":0}]},"panpot":{"isFolded":true,"height":40.0,"events":[{"pos":0,"value":0}]},"isMuted":false,"isSoloMode":false,"lastScrollPositionNoteNumber":72},{"type":0,"name":"VOCALOID","color":0,"busNo":0,"isFolded":false,"height":0.0,"volume":{"isFolded":true,"height":40.0,"events":[{"pos":0,"value":0}]},"panpot":{"isFolded":true,"height":40.0,"events":[{"pos":0,"value":0}]},"isMuted":false,"isSoloMode":false,"lastScrollPositionNoteNumber":72,"parts":[{"pos":0,"duration":7680,"styleName":"No Effect","stylePresetID":"0c29827a-4289-495d-94d2-e23602d346c6","voice":{"compID":"BK67C6KZLHZHZKC2","langID":2},"aiVoice":{"compID":"BLKEA452HDSKXLD7","langIDs":[{"langID":0},{"langID":1},{"langID":4}]},"midiEffects":[{"id":"SingingSkill","isBypassed":true,"isFolded":false,"parameters":[{"name":"Skill","value":5},{"name":"Amount","value":5},{"name":"Name","value":"75F04D2B-D8E4-44b8-939B-41CD101E08FD"}]},{"id":"VoiceColor","isBypassed":true,"isFolded":false,"parameters":[{"name":"Exciter","value":0},{"name":"Growl","value":0},{"name":"Breathiness","value":0},{"name":"Air","value":0},{"name":"Mouth","value":0},{"name":"Character","value":0},{"name":"S5Expression","value":50},{"name":"S5Air","value":0},{"name":"S5Character","value":0}]},{"id":"RobotVoice","isBypassed":true,"isFolded":false,"parameters":[{"name":"Mode","value":1}]},{"id":"Breath","isBypassed":true,"isFolded":false,"parameters":[{"name":"Mode","value":1},{"name":"Type","value":0},{"name":"Exhalation","value":5}]},{"id":"Take","isBypassed":false,"isFolded":false,"parameters":[{"name":"Lane630","value":0}]}],"notes":[{"lyric":"아","phoneme":"a","langID":2,"isProtected":false,"isAiVibratoEnabled":true,"pos":0,"duration":480,"number":60,"velocity":64,"exp":{"accent":50,"decay":50,"bendDepth":0,"bendLength":0,"opening":127},"aiExp":{"pitchFine":0.5,"pitchDriftStart":0.5,"pitchDriftEnd":0.5,"pitchScalingCenter":0.5,"pitchScalingOrigin":0.5,"pitchTransitionStart":0.5,"pitchTransitionEnd":0.5,"amplitudeWhole":0.5,"amplitudeStart":0.5,"amplitudeEnd":0.5,"vibratoLeadingDepth":0.5,"vibratoFollowingDepth":0.5},"singingSkill":{"duration":160,"weight":{"pre":64,"post":64}},"vibrato":{"type":0,"duration":320,"depths":[{"pos":0,"value":0}],"rates":[{"pos":0,"value":50}]}},{"lyric":"아","phoneme":"a","langID":2,"isProtected":false,"isAiVibratoEnabled":true,"pos":480,"duration":480,"number":62,"velocity":64,"exp":{"accent":50,"decay":50,"bendDepth":0,"bendLength":0,"opening":127},"aiExp":{"pitchFine":0.5,"pitchDriftStart":0.5,"pitchDriftEnd":0.5,"pitchScalingCenter":0.5,"pitchScalingOrigin":0.5,"pitchTransitionStart":0.5,"pitchTransitionEnd":0.5,"amplitudeWhole":0.5,"amplitudeStart":0.5,"amplitudeEnd":0.5,"vibratoLeadingDepth":0.5,"vibratoFollowingDepth":0.5},"singingSkill":{"duration":160,"weight":{"pre":64,"post":64}},"vibrato":{"type":0,"duration":320,"depths":[{"pos":0,"value":0}],"rates":[{"pos":0,"value":50}]}},{"lyric":"아","phoneme":"a","langID":2,"isProtected":false,"isAiVibratoEnabled":true,"pos":960,"duration":480,"number":64,"velocity":64,"exp":{"accent":50,"decay":50,"bendDepth":0,"bendLength":0,"opening":127},"aiExp":{"pitchFine":0.5,"pitchDriftStart":0.5,"pitchDriftEnd":0.5,"pitchScalingCenter":0.5,"pitchScalingOrigin":0.5,"pitchTransitionStart":0.5,"pitchTransitionEnd":0.5,"amplitudeWhole":0.5,"amplitudeStart":0.5,"amplitudeEnd":0.5,"vibratoLeadingDepth":0.5,"vibratoFollowingDepth":0.5},"singingSkill":{"duration":160,"weight":{"pre":64,"post":64}},"vibrato":{"type":0,"duration":320,"depths":[{"pos":0,"value":0}],"rates":[{"pos":0,"value":50}]}}],"controllers":[{"name":"dynamics","events":[{"pos":27,"value":65},{"pos":37,"value":68},{"pos":64,"value":77},{"pos":83,"value":83},{"pos":131,"value":97},{"pos":153,"value":101},{"pos":183,"value":109},{"pos":187,"value":110},{"pos":190,"value":111},{"pos":200,"value":110},{"pos":216,"value":105},{"pos":223,"value":101},{"pos":239,"value":93},{"pos":246,"value":89},{"pos":259,"value":81},{"pos":260,"value":79},{"pos":273,"value":71},{"pos":281,"value":65},{"pos":298,"value":55},{"pos":323,"value":41},{"pos":331,"value":38},{"pos":332,"value":37},{"pos":335,"value":36},{"pos":351,"value":35},{"pos":374,"value":37},{"pos":422,"value":47},{"pos":424,"value":48},{"pos":436,"value":54},{"pos":438,"value":55},{"pos":454,"value":63},{"pos":456,"value":64},{"pos":468,"value":70},{"pos":478,"value":73},{"pos":488,"value":75},{"pos":510,"value":79},{"pos":511,"value":80},{"pos":524,"value":82},{"pos":537,"value":85},{"pos":549,"value":86},{"pos":560,"value":84},{"pos":562,"value":83},{"pos":567,"value":82},{"pos":582,"value":76},{"pos":589,"value":74},{"pos":608,"value":68},{"pos":610,"value":67},{"pos":624,"value":63},{"pos":626,"value":62},{"pos":632,"value":60},{"pos":639,"value":59},{"pos":649,"value":60},{"pos":657,"value":62},{"pos":662,"value":63},{"pos":669,"value":64},{"pos":673,"value":65},{"pos":677,"value":66},{"pos":691,"value":69},{"pos":694,"value":70},{"pos":706,"value":69},{"pos":720,"value":68},{"pos":733,"value":67},{"pos":755,"value":66},{"pos":761,"value":64}]},{"name":"pitchBendSens","events":[{"pos":0,"value":1}]},{"name":"pitchBend","events":[{"pos":42,"value":-301},{"pos":65,"value":541},{"pos":75,"value":947},{"pos":110,"value":2103},{"pos":125,"value":2716},{"pos":159,"value":3567},{"pos":167,"value":3733},{"pos":171,"value":3786},{"pos":181,"value":3869},{"pos":221,"value":3817},{"pos":238,"value":3589},{"pos":247,"value":3285},{"pos":274,"value":2455},{"pos":282,"value":2290},{"pos":293,"value":1721},{"pos":303,"value":1315},{"pos":331,"value":0},{"pos":363,"value":-1599},{"pos":369,"value":-1848},{"pos":391,"value":-2653},{"pos":393,"value":-2724},{"pos":397,"value":-2776},{"pos":398,"value":-2811},{"pos":404,"value":-2863},{"pos":433,"value":-2595},{"pos":450,"value":-2367},{"pos":487,"value":-1941},{"pos":516,"value":-1538},{"pos":555,"value":-815},{"pos":559,"value":-710},{"pos":584,"value":0},{"pos":594,"value":266},{"pos":609,"value":880},{"pos":627,"value":1493},{"pos":628,"value":1564},{"pos":637,"value":1869},{"pos":639,"value":1941},{"pos":652,"value":1977},{"pos":656,"value":1941},{"pos":664,"value":1776},{"pos":666,"value":1740},{"pos":681,"value":1127},{"pos":683,"value":1056},{"pos":705,"value":0},{"pos":734,"value":-1072},{"pos":744,"value":-1376},{"pos":748,"value":-1481},{"pos":751,"value":-1533},{"pos":759,"value":-1283},{"pos":761,"value":-1211},{"pos":768,"value":-805},{"pos":778,"value":-399},{"pos":782,"value":-294},{"pos":783,"value":-258},{"pos":791,"value":-221},{"pos":797,"value":-257},{"pos":799,"value":-293},{"pos":803,"value":-345},{"pos":822,"value":0},{"pos":960,"value":8191}]}]}]}]}
+{
+    "version": {
+        "major": 6,
+        "minor": 5,
+        "revision": 1
+    },
+    "vender": "Yamaha Corporation",
+    "title": "test",
+    "masterTrack": {
+        "samplingRate": 44100,
+        "mainTuning": 440.0,
+        "loop": {
+            "isEnabled": false,
+            "begin": 0,
+            "end": 7680
+        },
+        "tempo": {
+            "isFolded": false,
+            "height": 0.0,
+            "global": {
+                "isEnabled": false,
+                "value": 12000
+            },
+            "ara": {
+                "isEnabled": true
+            },
+            "events": [
+                {
+                    "pos": 0,
+                    "value": 12000
+                }
+            ]
+        },
+        "timeSig": {
+            "isFolded": false,
+            "events": [
+                {
+                    "bar": 0,
+                    "numer": 4,
+                    "denom": 4
+                }
+            ]
+        },
+        "volume": {
+            "isFolded": false,
+            "height": 20.0,
+            "events": [
+                {
+                    "pos": 0,
+                    "value": 0
+                }
+            ]
+        }
+    },
+    "voices": [
+        {
+            "compID": "BK67C6KZLHZHZKC2",
+            "name": "UNI_Kor_Original"
+        },
+        {
+            "compID": "BLKEA452HDSKXLD7",
+            "name": "asa"
+        }
+    ],
+    "tracks": [
+        {
+            "type": 2,
+            "name": "dum",
+            "color": 3,
+            "busNo": 0,
+            "isFolded": false,
+            "height": 0.0,
+            "volume": {
+                "isFolded": true,
+                "height": 40.0,
+                "events": [
+                    {
+                        "pos": 0,
+                        "value": 0
+                    }
+                ]
+            },
+            "panpot": {
+                "isFolded": true,
+                "height": 40.0,
+                "events": [
+                    {
+                        "pos": 0,
+                        "value": 0
+                    }
+                ]
+            },
+            "isMuted": false,
+            "isSoloMode": false,
+            "lastScrollPositionNoteNumber": 72
+        },
+        {
+            "type": 0,
+            "name": "VOCALOID",
+            "color": 0,
+            "busNo": 0,
+            "isFolded": false,
+            "height": 0.0,
+            "volume": {
+                "isFolded": true,
+                "height": 40.0,
+                "events": [
+                    {
+                        "pos": 0,
+                        "value": 0
+                    }
+                ]
+            },
+            "panpot": {
+                "isFolded": true,
+                "height": 40.0,
+                "events": [
+                    {
+                        "pos": 0,
+                        "value": 0
+                    }
+                ]
+            },
+            "isMuted": false,
+            "isSoloMode": false,
+            "lastScrollPositionNoteNumber": 72,
+            "parts": [
+                {
+                    "pos": 0,
+                    "duration": 7680,
+                    "styleName": "No Effect",
+                    "stylePresetID": "0c29827a-4289-495d-94d2-e23602d346c6",
+                    "voice": {
+                        "compID": "BK67C6KZLHZHZKC2",
+                        "langID": 2
+                    },
+                    "aiVoice": {
+                        "compID": "BLKEA452HDSKXLD7",
+                        "langIDs": [
+                            {
+                                "langID": 0
+                            },
+                            {
+                                "langID": 1
+                            },
+                            {
+                                "langID": 4
+                            }
+                        ]
+                    },
+                    "midiEffects": [
+                        {
+                            "id": "SingingSkill",
+                            "isBypassed": true,
+                            "isFolded": false,
+                            "parameters": [
+                                {
+                                    "name": "Skill",
+                                    "value": 5
+                                },
+                                {
+                                    "name": "Amount",
+                                    "value": 5
+                                },
+                                {
+                                    "name": "Name",
+                                    "value": "75F04D2B-D8E4-44b8-939B-41CD101E08FD"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "VoiceColor",
+                            "isBypassed": true,
+                            "isFolded": false,
+                            "parameters": [
+                                {
+                                    "name": "Exciter",
+                                    "value": 0
+                                },
+                                {
+                                    "name": "Growl",
+                                    "value": 0
+                                },
+                                {
+                                    "name": "Breathiness",
+                                    "value": 0
+                                },
+                                {
+                                    "name": "Air",
+                                    "value": 0
+                                },
+                                {
+                                    "name": "Mouth",
+                                    "value": 0
+                                },
+                                {
+                                    "name": "Character",
+                                    "value": 0
+                                },
+                                {
+                                    "name": "S5Expression",
+                                    "value": 50
+                                },
+                                {
+                                    "name": "S5Air",
+                                    "value": 0
+                                },
+                                {
+                                    "name": "S5Character",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "id": "RobotVoice",
+                            "isBypassed": true,
+                            "isFolded": false,
+                            "parameters": [
+                                {
+                                    "name": "Mode",
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Breath",
+                            "isBypassed": true,
+                            "isFolded": false,
+                            "parameters": [
+                                {
+                                    "name": "Mode",
+                                    "value": 1
+                                },
+                                {
+                                    "name": "Type",
+                                    "value": 0
+                                },
+                                {
+                                    "name": "Exhalation",
+                                    "value": 5
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Take",
+                            "isBypassed": false,
+                            "isFolded": false,
+                            "parameters": [
+                                {
+                                    "name": "Lane630",
+                                    "value": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "notes": [
+                        {
+                            "lyric": "아",
+                            "phoneme": "a",
+                            "langID": 2,
+                            "isProtected": false,
+                            "isAiVibratoEnabled": true,
+                            "pos": 0,
+                            "duration": 480,
+                            "number": 60,
+                            "velocity": 64,
+                            "exp": {
+                                "accent": 50,
+                                "decay": 50,
+                                "bendDepth": 0,
+                                "bendLength": 0,
+                                "opening": 127
+                            },
+                            "aiExp": {
+                                "pitchFine": 0.5,
+                                "pitchDriftStart": 0.5,
+                                "pitchDriftEnd": 0.5,
+                                "pitchScalingCenter": 0.5,
+                                "pitchScalingOrigin": 0.5,
+                                "pitchTransitionStart": 0.5,
+                                "pitchTransitionEnd": 0.5,
+                                "amplitudeWhole": 0.5,
+                                "amplitudeStart": 0.5,
+                                "amplitudeEnd": 0.5,
+                                "vibratoLeadingDepth": 0.5,
+                                "vibratoFollowingDepth": 0.5
+                            },
+                            "singingSkill": {
+                                "duration": 160,
+                                "weight": {
+                                    "pre": 64,
+                                    "post": 64
+                                }
+                            },
+                            "vibrato": {
+                                "type": 0,
+                                "duration": 320,
+                                "depths": [
+                                    {
+                                        "pos": 0,
+                                        "value": 0
+                                    }
+                                ],
+                                "rates": [
+                                    {
+                                        "pos": 0,
+                                        "value": 50
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "lyric": "아",
+                            "phoneme": "a",
+                            "langID": 2,
+                            "isProtected": false,
+                            "isAiVibratoEnabled": true,
+                            "pos": 480,
+                            "duration": 480,
+                            "number": 62,
+                            "velocity": 64,
+                            "exp": {
+                                "accent": 50,
+                                "decay": 50,
+                                "bendDepth": 0,
+                                "bendLength": 0,
+                                "opening": 127
+                            },
+                            "aiExp": {
+                                "pitchFine": 0.5,
+                                "pitchDriftStart": 0.5,
+                                "pitchDriftEnd": 0.5,
+                                "pitchScalingCenter": 0.5,
+                                "pitchScalingOrigin": 0.5,
+                                "pitchTransitionStart": 0.5,
+                                "pitchTransitionEnd": 0.5,
+                                "amplitudeWhole": 0.5,
+                                "amplitudeStart": 0.5,
+                                "amplitudeEnd": 0.5,
+                                "vibratoLeadingDepth": 0.5,
+                                "vibratoFollowingDepth": 0.5
+                            },
+                            "singingSkill": {
+                                "duration": 160,
+                                "weight": {
+                                    "pre": 64,
+                                    "post": 64
+                                }
+                            },
+                            "vibrato": {
+                                "type": 0,
+                                "duration": 320,
+                                "depths": [
+                                    {
+                                        "pos": 0,
+                                        "value": 0
+                                    }
+                                ],
+                                "rates": [
+                                    {
+                                        "pos": 0,
+                                        "value": 50
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "lyric": "아",
+                            "phoneme": "a",
+                            "langID": 2,
+                            "isProtected": false,
+                            "isAiVibratoEnabled": true,
+                            "pos": 960,
+                            "duration": 480,
+                            "number": 64,
+                            "velocity": 64,
+                            "exp": {
+                                "accent": 50,
+                                "decay": 50,
+                                "bendDepth": 0,
+                                "bendLength": 0,
+                                "opening": 127
+                            },
+                            "aiExp": {
+                                "pitchFine": 0.5,
+                                "pitchDriftStart": 0.5,
+                                "pitchDriftEnd": 0.5,
+                                "pitchScalingCenter": 0.5,
+                                "pitchScalingOrigin": 0.5,
+                                "pitchTransitionStart": 0.5,
+                                "pitchTransitionEnd": 0.5,
+                                "amplitudeWhole": 0.5,
+                                "amplitudeStart": 0.5,
+                                "amplitudeEnd": 0.5,
+                                "vibratoLeadingDepth": 0.5,
+                                "vibratoFollowingDepth": 0.5
+                            },
+                            "singingSkill": {
+                                "duration": 160,
+                                "weight": {
+                                    "pre": 64,
+                                    "post": 64
+                                }
+                            },
+                            "vibrato": {
+                                "type": 0,
+                                "duration": 320,
+                                "depths": [
+                                    {
+                                        "pos": 0,
+                                        "value": 0
+                                    }
+                                ],
+                                "rates": [
+                                    {
+                                        "pos": 0,
+                                        "value": 50
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "controllers": [
+                        {
+                            "name": "dynamics",
+                            "events": [
+                                {
+                                    "pos": 27,
+                                    "value": 65
+                                },
+                                {
+                                    "pos": 37,
+                                    "value": 68
+                                },
+                                {
+                                    "pos": 64,
+                                    "value": 77
+                                },
+                                {
+                                    "pos": 83,
+                                    "value": 83
+                                },
+                                {
+                                    "pos": 131,
+                                    "value": 97
+                                },
+                                {
+                                    "pos": 153,
+                                    "value": 101
+                                },
+                                {
+                                    "pos": 183,
+                                    "value": 109
+                                },
+                                {
+                                    "pos": 187,
+                                    "value": 110
+                                },
+                                {
+                                    "pos": 190,
+                                    "value": 111
+                                },
+                                {
+                                    "pos": 200,
+                                    "value": 110
+                                },
+                                {
+                                    "pos": 216,
+                                    "value": 105
+                                },
+                                {
+                                    "pos": 223,
+                                    "value": 101
+                                },
+                                {
+                                    "pos": 239,
+                                    "value": 93
+                                },
+                                {
+                                    "pos": 246,
+                                    "value": 89
+                                },
+                                {
+                                    "pos": 259,
+                                    "value": 81
+                                },
+                                {
+                                    "pos": 260,
+                                    "value": 79
+                                },
+                                {
+                                    "pos": 273,
+                                    "value": 71
+                                },
+                                {
+                                    "pos": 281,
+                                    "value": 65
+                                },
+                                {
+                                    "pos": 298,
+                                    "value": 55
+                                },
+                                {
+                                    "pos": 323,
+                                    "value": 41
+                                },
+                                {
+                                    "pos": 331,
+                                    "value": 38
+                                },
+                                {
+                                    "pos": 332,
+                                    "value": 37
+                                },
+                                {
+                                    "pos": 335,
+                                    "value": 36
+                                },
+                                {
+                                    "pos": 351,
+                                    "value": 35
+                                },
+                                {
+                                    "pos": 374,
+                                    "value": 37
+                                },
+                                {
+                                    "pos": 422,
+                                    "value": 47
+                                },
+                                {
+                                    "pos": 424,
+                                    "value": 48
+                                },
+                                {
+                                    "pos": 436,
+                                    "value": 54
+                                },
+                                {
+                                    "pos": 438,
+                                    "value": 55
+                                },
+                                {
+                                    "pos": 454,
+                                    "value": 63
+                                },
+                                {
+                                    "pos": 456,
+                                    "value": 64
+                                },
+                                {
+                                    "pos": 468,
+                                    "value": 70
+                                },
+                                {
+                                    "pos": 478,
+                                    "value": 73
+                                },
+                                {
+                                    "pos": 488,
+                                    "value": 75
+                                },
+                                {
+                                    "pos": 510,
+                                    "value": 79
+                                },
+                                {
+                                    "pos": 511,
+                                    "value": 80
+                                },
+                                {
+                                    "pos": 524,
+                                    "value": 82
+                                },
+                                {
+                                    "pos": 537,
+                                    "value": 85
+                                },
+                                {
+                                    "pos": 549,
+                                    "value": 86
+                                },
+                                {
+                                    "pos": 560,
+                                    "value": 84
+                                },
+                                {
+                                    "pos": 562,
+                                    "value": 83
+                                },
+                                {
+                                    "pos": 567,
+                                    "value": 82
+                                },
+                                {
+                                    "pos": 582,
+                                    "value": 76
+                                },
+                                {
+                                    "pos": 589,
+                                    "value": 74
+                                },
+                                {
+                                    "pos": 608,
+                                    "value": 68
+                                },
+                                {
+                                    "pos": 610,
+                                    "value": 67
+                                },
+                                {
+                                    "pos": 624,
+                                    "value": 63
+                                },
+                                {
+                                    "pos": 626,
+                                    "value": 62
+                                },
+                                {
+                                    "pos": 632,
+                                    "value": 60
+                                },
+                                {
+                                    "pos": 639,
+                                    "value": 59
+                                },
+                                {
+                                    "pos": 649,
+                                    "value": 60
+                                },
+                                {
+                                    "pos": 657,
+                                    "value": 62
+                                },
+                                {
+                                    "pos": 662,
+                                    "value": 63
+                                },
+                                {
+                                    "pos": 669,
+                                    "value": 64
+                                },
+                                {
+                                    "pos": 673,
+                                    "value": 65
+                                },
+                                {
+                                    "pos": 677,
+                                    "value": 66
+                                },
+                                {
+                                    "pos": 691,
+                                    "value": 69
+                                },
+                                {
+                                    "pos": 694,
+                                    "value": 70
+                                },
+                                {
+                                    "pos": 706,
+                                    "value": 69
+                                },
+                                {
+                                    "pos": 720,
+                                    "value": 68
+                                },
+                                {
+                                    "pos": 733,
+                                    "value": 67
+                                },
+                                {
+                                    "pos": 755,
+                                    "value": 66
+                                },
+                                {
+                                    "pos": 761,
+                                    "value": 64
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pitchBendSens",
+                            "events": [
+                                {
+                                    "pos": 0,
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pitchBend",
+                            "events": [
+                                {
+                                    "pos": 42,
+                                    "value": -301
+                                },
+                                {
+                                    "pos": 65,
+                                    "value": 541
+                                },
+                                {
+                                    "pos": 75,
+                                    "value": 947
+                                },
+                                {
+                                    "pos": 110,
+                                    "value": 2103
+                                },
+                                {
+                                    "pos": 125,
+                                    "value": 2716
+                                },
+                                {
+                                    "pos": 159,
+                                    "value": 3567
+                                },
+                                {
+                                    "pos": 167,
+                                    "value": 3733
+                                },
+                                {
+                                    "pos": 171,
+                                    "value": 3786
+                                },
+                                {
+                                    "pos": 181,
+                                    "value": 3869
+                                },
+                                {
+                                    "pos": 221,
+                                    "value": 3817
+                                },
+                                {
+                                    "pos": 238,
+                                    "value": 3589
+                                },
+                                {
+                                    "pos": 247,
+                                    "value": 3285
+                                },
+                                {
+                                    "pos": 274,
+                                    "value": 2455
+                                },
+                                {
+                                    "pos": 282,
+                                    "value": 2290
+                                },
+                                {
+                                    "pos": 293,
+                                    "value": 1721
+                                },
+                                {
+                                    "pos": 303,
+                                    "value": 1315
+                                },
+                                {
+                                    "pos": 331,
+                                    "value": 0
+                                },
+                                {
+                                    "pos": 363,
+                                    "value": -1599
+                                },
+                                {
+                                    "pos": 369,
+                                    "value": -1848
+                                },
+                                {
+                                    "pos": 391,
+                                    "value": -2653
+                                },
+                                {
+                                    "pos": 393,
+                                    "value": -2724
+                                },
+                                {
+                                    "pos": 397,
+                                    "value": -2776
+                                },
+                                {
+                                    "pos": 398,
+                                    "value": -2811
+                                },
+                                {
+                                    "pos": 404,
+                                    "value": -2863
+                                },
+                                {
+                                    "pos": 433,
+                                    "value": -2595
+                                },
+                                {
+                                    "pos": 450,
+                                    "value": -2367
+                                },
+                                {
+                                    "pos": 487,
+                                    "value": -1941
+                                },
+                                {
+                                    "pos": 516,
+                                    "value": -1538
+                                },
+                                {
+                                    "pos": 555,
+                                    "value": -815
+                                },
+                                {
+                                    "pos": 559,
+                                    "value": -710
+                                },
+                                {
+                                    "pos": 584,
+                                    "value": 0
+                                },
+                                {
+                                    "pos": 594,
+                                    "value": 266
+                                },
+                                {
+                                    "pos": 609,
+                                    "value": 880
+                                },
+                                {
+                                    "pos": 627,
+                                    "value": 1493
+                                },
+                                {
+                                    "pos": 628,
+                                    "value": 1564
+                                },
+                                {
+                                    "pos": 637,
+                                    "value": 1869
+                                },
+                                {
+                                    "pos": 639,
+                                    "value": 1941
+                                },
+                                {
+                                    "pos": 652,
+                                    "value": 1977
+                                },
+                                {
+                                    "pos": 656,
+                                    "value": 1941
+                                },
+                                {
+                                    "pos": 664,
+                                    "value": 1776
+                                },
+                                {
+                                    "pos": 666,
+                                    "value": 1740
+                                },
+                                {
+                                    "pos": 681,
+                                    "value": 1127
+                                },
+                                {
+                                    "pos": 683,
+                                    "value": 1056
+                                },
+                                {
+                                    "pos": 705,
+                                    "value": 0
+                                },
+                                {
+                                    "pos": 734,
+                                    "value": -1072
+                                },
+                                {
+                                    "pos": 744,
+                                    "value": -1376
+                                },
+                                {
+                                    "pos": 748,
+                                    "value": -1481
+                                },
+                                {
+                                    "pos": 751,
+                                    "value": -1533
+                                },
+                                {
+                                    "pos": 759,
+                                    "value": -1283
+                                },
+                                {
+                                    "pos": 761,
+                                    "value": -1211
+                                },
+                                {
+                                    "pos": 768,
+                                    "value": -805
+                                },
+                                {
+                                    "pos": 778,
+                                    "value": -399
+                                },
+                                {
+                                    "pos": 782,
+                                    "value": -294
+                                },
+                                {
+                                    "pos": 783,
+                                    "value": -258
+                                },
+                                {
+                                    "pos": 791,
+                                    "value": -221
+                                },
+                                {
+                                    "pos": 797,
+                                    "value": -257
+                                },
+                                {
+                                    "pos": 799,
+                                    "value": -293
+                                },
+                                {
+                                    "pos": 803,
+                                    "value": -345
+                                },
+                                {
+                                    "pos": 822,
+                                    "value": 0
+                                },
+                                {
+                                    "pos": 960,
+                                    "value": 8191
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
