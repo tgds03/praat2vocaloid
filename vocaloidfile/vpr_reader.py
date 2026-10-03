@@ -3,6 +3,8 @@ import math
 import json
 import zipfile
 
+from .tempo import TempoMap
+
 DIR = Path(__file__).resolve().parent
 
 with open(DIR / "default_note.json", 'r', encoding="utf-8") as file:
@@ -41,6 +43,7 @@ class VprConverter:
         except zipfile.BadZipFile as e:
             raise RuntimeError(f"Can not open {vprpath} as .vpr file") from e
         self.tuning_freq = self.seq_data["masterTrack"]["mainTuning"]
+        self.tempo = TempoMap(self.seq_data["masterTrack"]["tempo"])
         return self.seq_data
 
     def set_analysis(self, data):
@@ -124,7 +127,15 @@ class VprConverter:
         return new_controller
 
     def add_controlpoint(self, controller, pos, value):
-        controller["events"].append({"pos": pos, "value": value})
+        # rounding to tick may produce the same pos twice; keep the latest value
+        events = controller["events"]
+        if events and events[-1]["pos"] == pos:
+            events[-1]["value"] = value
+            return
+        events.append({"pos": pos, "value": value})
+
+    def _to_tick(self, sec, start_offset):
+        return self.tempo.sec_to_tick(sec + start_offset / 1000)
 
 
     def add_pitch_to_part(self, part, start_offset=0, tone_offset=0):
@@ -146,13 +157,12 @@ class VprConverter:
         # pbs := [0, 24]
         # pitch bend := [-8192, 8191]
         for note in self.notes:
-            startpos = int(note["bound"][0] * 1000) + start_offset
-            endpos = int(note["bound"][1] * 1000) + start_offset
+            startpos = self._to_tick(note["bound"][0], start_offset)
+            endpos = self._to_tick(note["bound"][1], start_offset)
 
             self.add_controlpoint(controller_pbs, startpos, max(1, min(note["pbs"], 24)))
             for idx in range(len(note["time"])):
-                pos = int(note["time"][idx] * 1000)
-                pos += start_offset
+                pos = self._to_tick(note["time"][idx], start_offset)
                 val = get_semitone(note["pitch_mid"], note["pitch"][idx]) / note["pbs"] * 8192
                 val = max(-8192, min(int(val), 8191))
                 self.add_controlpoint(controller_pb, pos, val)
@@ -184,8 +194,7 @@ class VprConverter:
         # add control points
         # dyn := [0, 127]
         for idx in range(len(self.intensity["time"])):
-            pos = int(self.intensity["time"][idx] * 1000)
-            pos += start_offset
+            pos = self._to_tick(self.intensity["time"][idx], start_offset)
             val = (self.intensity["intensity"][idx] - self.intensity["intensity_min"]) / self.intensity["intensity_range"]
             val = (max_value - min_value) * val + min_value
             val = max(0, min(int(val), 127))
